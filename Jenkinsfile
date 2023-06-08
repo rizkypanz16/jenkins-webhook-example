@@ -1,18 +1,15 @@
 pipeline {
     agent any
-
+    environment {
+        DB_USER = credentials('admin')
+        DB_PASS = credentials('ijinmasuk')
+    }
     stages {
         stage('Build') {
             steps {
                 // Build steps here
                 echo 'Building...'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                // Test steps here
-                echo 'Testing...'
+                echo '$DB_USER & $DB_PASS'
             }
         }
 
