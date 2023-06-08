@@ -10,8 +10,8 @@ pipeline {
                 // Build steps here
                 echo 'Building...'
                 script {
-                    echo ${DB_USER}
-                    echo ${DB_PASS}
+                    echo $DB_USER
+                    echo $DB_PASS
                 }
             }
         }
