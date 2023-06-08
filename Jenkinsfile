@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        DB_USER = 'admin'
-        DB_PASS = 'ijinmasuk'
+        DB_USER = credentials('admin')
+        DB_PASS = credentials('ijinmasuk')
     }
     stages {
         stage('Build') {
