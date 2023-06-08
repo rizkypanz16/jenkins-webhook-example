@@ -6,6 +6,7 @@ pipeline {
             steps {
                 // Build steps here
                 echo 'Building...'
+                ls -l
             }
         }
 
