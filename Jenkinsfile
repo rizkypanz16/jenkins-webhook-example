@@ -9,8 +9,8 @@ pipeline {
             steps {
                 // Build steps here
                 echo 'Building...'
-                echo "db_user: $DB_USER"
-                echo "db_pass: $DB_PASS"
+                echo "db_user: ${DB_USER}"
+                echo "db_pass: ${DB_PASS}"
             }
         }
 
