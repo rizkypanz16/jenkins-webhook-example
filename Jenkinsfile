@@ -1,13 +1,14 @@
 pipeline {
     agent any
-    environment {
-        DB_USER = credentials('admin')
-    }
     stages {
         stage('Build') {
             steps {
-                // Build steps here
-                echo 'Building...'
+		script {
+		    sh '''
+			echo "start build"
+			ls -l
+		    '''
+		}
             }
         }
 
