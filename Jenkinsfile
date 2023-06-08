@@ -7,6 +7,9 @@ pipeline {
 		    sh '''
 			echo "start build"
 			ls -l
+			npm install
+			npm run build
+			ls -l
 		    '''
 		}
             }
