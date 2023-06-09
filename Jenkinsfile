@@ -27,10 +27,14 @@ pipeline {
                 sh 'ls -l'
                 echo 'Start Deploy Prod'
                 sh 'npm install'
-                sh 'npm run build'
                 sh 'ls -l'
                 echo 'Deploy Prod successfully'
             }
         }
+    }
+        // Define triggers for the pipeline
+    triggers {
+        // Webhook trigger for push events
+        githubPush()
     }
 }
