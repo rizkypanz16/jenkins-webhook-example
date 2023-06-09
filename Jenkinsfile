@@ -1,6 +1,12 @@
 pipeline {
     agent any
 
+    // Define triggers for the pipeline
+    triggers {
+        // Webhook trigger for push events
+        push()
+    }
+
     stages {
         stage('Dev Environment') {
             agent {
@@ -32,11 +38,5 @@ pipeline {
                 echo 'Deploy Prod successfully'
             }
         }
-    }
-
-    // Define triggers for the pipeline
-    triggers {
-        // Webhook trigger for push events
-        githubPush()
     }
 }
