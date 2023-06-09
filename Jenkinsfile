@@ -12,6 +12,9 @@ pipeline {
             steps {
                 sh 'ls -l'
                 echo 'Start Deploy Dev'
+                sh 'npm install'
+                sh 'pm2 start npm --name "simple-microservice-dev" -- start'
+                sh 'pm2 list'
                 echo 'Deploy Dev successfully'
             }
         }
