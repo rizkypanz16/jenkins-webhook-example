@@ -4,7 +4,7 @@ pipeline {
     // Define triggers for the pipeline
     triggers {
         // Webhook trigger for push events
-        push()
+        githubPush()
     }
 
     stages {
