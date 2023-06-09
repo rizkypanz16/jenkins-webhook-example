@@ -33,4 +33,10 @@ pipeline {
             }
         }
     }
+
+    // Define triggers for the pipeline
+    triggers {
+        // Webhook trigger for push events
+        githubPush()
+    }
 }
