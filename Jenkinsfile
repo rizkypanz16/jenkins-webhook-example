@@ -35,6 +35,9 @@ pipeline {
                 echo 'Start Deploying app'
                 sh 'ls -l'
                 echo 'Start Deploy Prod'
+                sh 'npm install'
+                sh 'pm2 start npm --name "simple-microservice-prod" -- start'
+                sh 'pm2 list'
                 echo 'Deploy Prod successfully'
             }
         }
