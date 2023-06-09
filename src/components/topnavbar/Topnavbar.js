@@ -6,7 +6,7 @@ import { FcParallelTasks } from "react-icons/fc";
 
 function Topnavbar() {
   const currentPath = window.location.pathname;
-  const navBrandText = "   Simple Microservice";
+  const navBrandText = "   Simple Microservice Dev";
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container>
