@@ -33,7 +33,7 @@ pipeline {
                 sh 'npm install'
                 sh 'pm2 start npm --name "simple-microservice-prod" -- start'
                 sh 'pm2 list'
-                echo 'Deploy Prod successfully'
+                echo 'Deploy Prod successfully.'
             }
         }
     }
